@@ -1,5 +1,5 @@
 # MEA Tools
-Tools to assist in the usage of MEA (motion energy analysis).
+Tools and documents to assist in the usage of MEA (motion energy analysis).
 
 Implementations by
 * [Ramseyer](https://osf.io/gkzs3/)
