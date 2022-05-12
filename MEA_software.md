@@ -5,7 +5,7 @@ This document describes differences between the two MEA implementations.
 |Available at|[psync.ch](https://psync.ch/downloads/), [osf.io](https://osf.io/gkzs3/)|[GitHub](https://github.com/10101-00001/MEA)|
 |Platform|Windows & macOS|MATLAB|
 |Software|Standalone, closed source|MATLAB, open source|
-|License|Free of charge for research purposes.|No license assigned|
+|License|Declared "Free of charge for research purposes", no official license assigned|No license assigned|
 |ROI definition|Drawn with a tool on the playing video. Video playback can be used to verify and correct ROIs. Body part reflected by ROI needs to be noted manually. ROI definitions cannot be saved.|Drawn with a tool on a still image of the video. Accuracy for the whole video cannot be verified. ROIs are assigned a body part by default, no need to note manually. ROI definitions are saved as files automatically.|Drawn with a tool on a still image of the video. Accuracy for the whole video cannot be verified. ROIs are assigned a body part by default, no need to note manually. ROI definitions are saved as files automatically.|
 |Ratio support|supports 4:3 and 16:9 ratio (different implementations)|supports any ratio|
 |Noise threshold|Default threshold given, no easy way to find more exact threshold.|Noise threshold is estimated by ROI drawn in a supposedly static part of the video|
