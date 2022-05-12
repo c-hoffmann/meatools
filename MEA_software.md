@@ -2,7 +2,7 @@ This document describes differences between the two MEA implementations.
 
 |   |Ramseyer|Altmann|
 |---|---|---|
-|Available at|[osf.io](https://osf.io/gkzs3/), [psync.ch](https://psync.ch/downloads/)|[GitHub](https://github.com/10101-00001/MEA)|
+|Available at|[psync.ch](https://psync.ch/downloads/), [osf.io](https://osf.io/gkzs3/)|[GitHub](https://github.com/10101-00001/MEA)|
 |Platform|Windows & macOS|MATLAB|
 |Software|Standalone, closed source|MATLAB, open source|
 |License|Free of charge for research purposes.|No license assigned|
