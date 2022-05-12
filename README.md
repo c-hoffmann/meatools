@@ -18,3 +18,6 @@ For details on the differences of these two implementations, see [`MEA_software.
 * Enfuse/Enblend (http://enblend.sourceforge.net/) installed and added to PATH
 ### Usage
 Copy `ROI_create_helper_images.bat` into the folder containing a SINGLE video file (*.mp4) to be analyzed and start it from there.
+
+## Affilliation
+* The author of this repo is the operator of the [Motion lab](https://www.uniklinik-freiburg.de/psychosomatik/sektionen/systemische-gesundheitsforschung/eeg-labor.html) of the [Department of Psychosomatic Medicine and Psychotherapy](https://www.uniklinik-freiburg.de/psychosomatik.html) of the [Medical Center](https://www.uniklinik-freiburg.de/), [University of Freiburg](https://uni-freiburg.de/), Germany
