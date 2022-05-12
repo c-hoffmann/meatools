@@ -2,8 +2,8 @@
 Tools and documents to assist in the usage of MEA (motion energy analysis).
 
 MEA-Implementations by
-* [Ramseyer](https://osf.io/gkzs3/)
-* [Altmann](https://github.com/10101-00001/MEA)
+* [Dr. phil. Fabian Ramseyer](https://osf.io/gkzs3/)
+* [Dr. phil. Uwe Altmann](https://github.com/10101-00001/MEA)
 
 For details on the differences of these two implementations, see [`MEA_software.md`](https://github.com/thekryz/meatools/blob/main/MEA_software.md)
 
