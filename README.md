@@ -5,7 +5,7 @@ MEA-Implementations by
 * [Ramseyer](https://osf.io/gkzs3/)
 * [Altmann](https://github.com/10101-00001/MEA)
 
-For details on the differences of these two implementations, see [MEA_software.md](https://github.com/thekryz/meatools/blob/main/MEA_software.md)
+For details on the differences of these two implementations, see [`MEA_software.md`](https://github.com/thekryz/meatools/blob/main/MEA_software.md)
 
 ## Create helpful images to determine ROIs in video
 `ROI_create_helper_images.bat` can be used to create images that represent motion in a video file. This can help to determine the correct ROI definition. Especially helpful with the Altmann implementation (in comparison with Ramseyer implementation), since it doesn't allow watching the whole video with the ROIs overlayed.
