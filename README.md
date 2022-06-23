@@ -13,8 +13,8 @@ For details on the differences of these two implementations, see [`MEA_software.
 ![ROIhelperimages](https://user-images.githubusercontent.com/10432441/167422288-fd374b7b-4699-4a79-82ad-434bbb000e26.png)
 *Note*: Face in c was blurred for anonymity. ImageMagick created image a, Enfuse created images b and c. While a and b support defining the ROI borders as to not miss any movement, c is helpful in estimating the general regions of head and body, on which ROI-separating boundaries can be based.
 ### Preconditions
-* ffmpeg (https://www.ffmpeg.org/) installed and added to PATH
 * ImageMagick (https://imagemagick.org/) installed and added to PATH
+* ffmpeg (https://www.ffmpeg.org/) installed and added to PATH (if not automatically done by installing ImageMagick)
 * Enfuse/Enblend (http://enblend.sourceforge.net/) installed and added to PATH
 ### Usage
 Copy `ROI_create_helper_images.bat` into the folder containing a SINGLE video file (*.mp4) to be analyzed and start it from there.
