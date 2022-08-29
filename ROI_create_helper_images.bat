@@ -12,13 +12,12 @@ REM Adding something to PATH ensures that it can be started from everywhere. To 
 REM ### STEP 01 - FFMPEG FRAME EXTRACT ###
 
 mkdir allimages
-cd allimages
 for /f "tokens=*" %%i in ('forfiles /S /M *.mp4 /C "cmd /c echo @file"') do set videofile=%%i
 set videofile=%videofile:"=%
 echo INFO: found video file "%videofile%"
 
+cd allimages
 ffmpeg -i "..\%videofile%" -s 1352x760 -qscale:v 2 -vf "select=not(mod(n\,10))" -vsync vfr pic%%05d.jpeg
-
 cd ..
 
 REM Optionen:
