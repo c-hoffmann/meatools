@@ -17,18 +17,19 @@ set videofile=%videofile:"=%
 echo INFO: found video file "%videofile%"
 
 cd allimages
-ffmpeg -i "..\%videofile%" -s 1352x760 -qscale:v 2 -vf "select=not(mod(n\,10))" -vsync vfr pic%%05d.jpeg
-cd ..
 
-REM Optionen:
+REM Options:
 REM -s reflects the resolution of the extracted images. Chosen so that it is a 2x reduction of the videos with 2704 x 1520
 REM -qscale:v determines the quality of the extracted JPEG images. 2 is the best quality, 31 the worst. High quality recommended, otherwise artifacts will occur later.
 REM -vf "select=not(mod(n\,5))" -vsync vfr extracts one frame per 5 frames (reduces necessary RAM and calculation time afterwards with acceptable loss of accuracy)
 
 REM /!\ Attention: 1 frame per 5 frames leads to a very heavy load of RAM with Enfuse. It is possible that an overflow may occur. In this case reduce the frames, e.g. to 1 frame per 20 or reduce the resolution of the single frames.
 
+ffmpeg -i "..\%videofile%" -s 1352x760 -qscale:v 2 -vf "select=not(mod(n\,10))" -vsync vfr pic%%05d.jpeg
+cd ..
 
-REM #### ENFUSE / IMAGEMAGICK ####
+
+REM #### STEP 02 - ENFUSE / IMAGEMAGICK ####
 
 mkdir fusedpics
 REM "hardmask" helps to recognize rare conditions, "softmask" provides a good overall view.
@@ -42,11 +43,11 @@ magick convert "fusedpics\magick_min.tif" "fusedpics\magick_max.tif" -compose di
 magick convert "fusedpics\minmaxdiff.tif" -resize 2704x1520 "fusedpics\minmaxdiff_resized.tif"
 
 REM Cleanup...
-
 del fusedpics\magick_max.tif fusedpics\magick_min.tif
 rmdir allimages /s /q
 
-REM Video aus Bild erzeugen zum ROIs zeichnen
+REM #### STEP 03 - CREATE VIDEO ####
+REM Create video from the fused picture to allow defining ROI with Altmann MEA
 (for /L %%i in (1,1,1000) do @echo file 'fusedpics\minmaxdiff_resized.tif') > piclist.txt
 ffmpeg -y -r 60 -f concat -safe 0 -i "piclist.txt" -q:v 1 minmaxdiff.avi
 del piclist.txt
