@@ -1,3 +1,5 @@
+REM (c) 2022 Christian Hoffmann
+
 REM In order to better assess ROIs, an image is created from the overall video that illustrates the movement space of the individuals. For this purpose, images are first extracted from the video and then merged into one image.
 
 REM Use this script by copying the *.bat-File into the folder containing a SINGLE video file (*.mp4) to be analyzed and start it from there.
